@@ -70,4 +70,13 @@ class RestaurantTest {
     public void display() {
         restaurant.displayDetails();
     }
+
+    //>>>>>>>>>>>>>>>>>>>>>>USER: ADDING ITEMS TO GET ORDER TOTAL<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void add_order_items_get_total_ordered_amount(){
+        int orderTotal = restaurant.displayOrderTotal("Sweet corn soup","Vegetable lasagne");
+        assertEquals(388,orderTotal);
+    }
+    //>>>>>>>>>>>>>>>>>>>>>>USER: ADDING ORDER TOTAL<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 }
